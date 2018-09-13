@@ -5,6 +5,7 @@ Disclaimer:
 This is a work in progress and results may vary. 
 
 Usage:
+
 The file contains two objects that contain the functionally. In the future I am to make this executable through the command line. As of now it can only be called from another script. 
 
 “ImageCollector” Class: 
