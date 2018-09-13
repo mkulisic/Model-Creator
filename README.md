@@ -1,6 +1,3 @@
-# Model-Creator
-Downloads and prepossesses Images from google images and then trains a model to predict on those images
-
 **Disclaimer:**
 
 This is a work in progress and results may vary.
@@ -30,15 +27,15 @@ This class downloads images based on Queries given to it. The amount of images t
 
 **Ex:**
 
-test = ImageCollector(Query = [&#39;airplane.jpg&#39;, &#39;dog.jpg&#39;, &#39;trees.jpg&#39;, &#39;frog.jpg&#39;], split = 0.8, dest = &#39;&#39;)
+    test = ImageCollector(Query = [&#39;airplane.jpg&#39;, &#39;dog.jpg&#39;, &#39;trees.jpg&#39;, &#39;frog.jpg&#39;], split = 0.8, dest = &#39;&#39;)
 
-test.download\_images(maxN = 500)
+    test.download\_images(maxN = 500)
 
-test.filter\_imgs()
+    test.filter\_imgs()
 
-#test.multiply\_imgs(test.Query)
+    #test.multiply\_imgs(test.Query)
 
-test.pickle\_images(split = 0.9, dest = &#39;test1&#39;)
+    test.pickle\_images(split = 0.9, dest = &#39;test1&#39;)
 
 **&quot;Model&quot; Class:**
 
