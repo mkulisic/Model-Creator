@@ -20,22 +20,22 @@ This class downloads images based on Queries given to it. The amount of images t
 **Methods:**
 
 - **--**** download\_images(self, Query, maxN = None, MaxRes = None)::** Downloads the amount of images specified into the downloads folder.
-- **--* filter\_imgs():** Removes all unusable images from the folder.
-- **--* multiply\_imgs(self, num = 4):** Uses affine transformations to increase the number of images in the downloads folder. Still not fully working so it might be best not to use it.
-- **--* pickle\_images(self, split, dest):** Resizes, normalizes, randomizes and separates data into train, test and validation sets.
-- **--* \_\_init\_\_(self, dest,validation = 0, Query = None,  split = 0.8)**
+- **--**** filter\_imgs():** Removes all unusable images from the folder.
+- **--**** multiply\_imgs(self, num = 4):** Uses affine transformations to increase the number of images in the downloads folder. Still not fully working so it might be best not to use it.
+- **--**** pickle\_images(self, split, dest):** Resizes, normalizes, randomizes and separates data into train, test and validation sets.
+- **--**** \_\_init\_\_(self, dest,validation = 0, Query = None,  split = 0.8)**
 
 **Ex:**
 
-    test = ImageCollector(Query = [&#39;airplane.jpg&#39;, &#39;dog.jpg&#39;, &#39;trees.jpg&#39;, &#39;frog.jpg&#39;], split = 0.8, dest = &#39;&#39;)
+test = ImageCollector(Query = [&#39;airplane.jpg&#39;, &#39;dog.jpg&#39;, &#39;trees.jpg&#39;, &#39;frog.jpg&#39;], split = 0.8, dest = &#39;&#39;)
 
-    test.download\_images(maxN = 500)
+test.download\_images(maxN = 500)
 
-    test.filter\_imgs()
+test.filter\_imgs()
 
-    #test.multiply\_imgs(test.Query)
+#test.multiply\_imgs(test.Query)
 
-    test.pickle\_images(split = 0.9, dest = &#39;test1&#39;)
+test.pickle\_images(split = 0.9, dest = &#39;test1&#39;)
 
 **&quot;Model&quot; Class:**
 
@@ -43,10 +43,10 @@ Creates a basic keras convolutional neural network and trains it based on the im
 
 **Methods:**
 
-- **--* \_\_init\_\_(self,epoch, num\_out, hold\_prob = 0.7, learning\_rate = 0.0001, layers = 2, filters = [32,64, 128], name = &#39;test\_model&#39;)**
-- **--* get\_images(self, dest):** Loads a pickle from dest.
-- **--* next\_batch(self, data, data\_labels,  steps):** Outputs a batch of images and labels from data and data\_labels of size steps. The batch is random.
-- **--* train\_layers(self):** Builds and trains the convolutional neural network. Return the model created.
+- **--**** \_\_init\_\_(self,epoch, num\_out, hold\_prob = 0.7, learning\_rate = 0.0001, layers = 2, filters = [32,64, 128], name = &#39;test\_model&#39;)**
+- **--**** get\_images(self, dest):** Loads a pickle from dest.
+- **--**** next\_batch(self, data, data\_labels,  steps):** Outputs a batch of images and labels from data and data\_labels of size steps. The batch is random.
+- **--**** train\_layers(self):** Builds and trains the convolutional neural network. Return the model created.
 
 **Ex:**
 
@@ -62,19 +62,19 @@ Creates a basic keras convolutional neural network and trains it based on the im
 
 **Test 1:**
 
-- **--* Queries =** [&#39;airplane.jpg&#39;, &#39;dog.jpg&#39;, &#39;trees.jpg&#39;, &#39;frog.jpg&#39;]
-- **--* Number of Images =** 500
-- **--* Epoch** = 80**
-- **--* Train/Test split =** 9
+- **--**** Queries ****=** [&#39;airplane.jpg&#39;, &#39;dog.jpg&#39;, &#39;trees.jpg&#39;, &#39;frog.jpg&#39;]
+- **--**** Number of Images =** 500
+- **--**** Epoch = 80**
+- **--**** Train/Test split =** 9
 
 This resulted in an accuracy of 85%.
 
 **Test 2:**
 
 - **--**** Queries ****=** [&#39;airplane.jpg&#39;, &#39;dog.jpg&#39;, &#39;trees.jpg&#39;, &#39;frog.jpg&#39;, &#39;ship.jpg&#39;, &#39;bird.jpg&#39;]
-- **--* Number of Images =** 500
-- **--* Epoch = 80**
-- **--* Train/Test split =** 9
+- **--**** Number of Images =** 500
+- **--**** Epoch = 80**
+- **--**** Train/Test split =** 9
 
 This resulted in an accuracy of 75%.
 
